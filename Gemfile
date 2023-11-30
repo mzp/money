@@ -11,6 +11,7 @@ gem 'sprockets-rails'
 
 gem 'jbuilder'
 gem 'pg'
+gem 'sidekiq'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 

@@ -38,7 +38,11 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system in a temporary directory.
   config.active_storage.service = :test
+  config.logger = ActiveSupport::Logger.new($stdout)
+                                       .tap  { |logger| logger.formatter = Logger::Formatter.new }
+                                       .then { |logger| ActiveSupport::TaggedLogging.new(logger) }
 
+  config.log_level = ARGV.include?('-v') ? :debug : :warn
   config.action_mailer.perform_caching = false
 
   # Tell Action Mailer not to deliver emails to the real world.
