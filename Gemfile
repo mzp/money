@@ -10,7 +10,7 @@ gem 'rails'
 gem 'sprockets-rails'
 
 gem 'jbuilder'
-gem 'sqlite3'
+gem 'pg'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 
