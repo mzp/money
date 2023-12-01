@@ -42,7 +42,7 @@ Rails.application.configure do
                                        .tap  { |logger| logger.formatter = Logger::Formatter.new }
                                        .then { |logger| ActiveSupport::TaggedLogging.new(logger) }
 
-  config.log_level = ARGV.include?('-v') ? :debug : :warn
+  config.log_level = ARGV.include?('-v') ? :info : :warn
   config.action_mailer.perform_caching = false
 
   # Tell Action Mailer not to deliver emails to the real world.

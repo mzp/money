@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
 class BankAccount < ApplicationRecord
-  has_many :bank_transactions, dependent: :destroy
+  has_many :transactions,
+           class_name: 'BankTransaction',
+           dependent: :destroy
 end

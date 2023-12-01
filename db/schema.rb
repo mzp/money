@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_30_045502) do
 
   create_table "bank_accounts", force: :cascade do |t|
     t.string "description"
-    t.decimal "latest_balance"
+    t.decimal "balance"
     t.datetime "modified_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_30_045502) do
     t.datetime "issued_at"
     t.string "description"
     t.decimal "amount"
-    t.decimal "running_balance"
+    t.decimal "balance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["bank_account_id"], name: "index_bank_transactions_on_bank_account_id"
